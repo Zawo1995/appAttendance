@@ -1,0 +1,51 @@
+<ion-header>
+
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            首页
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="calendar"></ion-icon>
+            </ion-button>
+            <ion-button color="light">
+                <ion-icon slot="icon-only" name="notifications"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let s of sales">
+                <h6>{{s.title}}</h6>
+                <h4><span>{{564.678 | number:'1.2-2'}}元</span></h4>
+                <p>
+                    {{s.content}}
+                    <span [ngClass]="{'less-equal':s.current - s.previous <= 0,'greater':s.current - s.previous > 0}">
+       {{s.current -s.previous | number : '1.2-2'}}
+        </span>&nbsp;
+                 <ng-container [ngSwitch]="minus(s.current, s.previous)">
+                        <ion-icon name="arrow-round-up" color="danger" *ngSwitchCase="1"></ion-icon>
+                        <ion-icon name="arrow-round-forward" color="success" *ngSwitchCase="0"></ion-icon>
+                        <ion-icon name="arrow-round-down" color="success" *ngSwitchCase="-1"></ion-icon>
+                    </ng-container>
+                </p>
+            </ion-col>
+
+        </ion-row>
+        <ion-row class="quick-actions">
+            <ion-col class="quick-action-item">
+                <a class="shortcut" href="">
+                    <ion-icon name="apps"></ion-icon>
+                    <div>新增商品</div>
+                </a>
+            </ion-col>
+            <!-- 其他省略 -->
+        </ion-row>
+    </ion-grid>
+</ion-content>

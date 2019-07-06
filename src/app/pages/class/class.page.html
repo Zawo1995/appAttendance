@@ -1,0 +1,51 @@
+
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>班课</ion-title>
+    <ion-button (click)="presentPopover($event)">
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+  <ion-card *ngFor="let root of courseName " >
+    <ion-card-header>
+      <ion-card-title >{{root.courseName}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-icon ></ion-icon>
+      <ion-label>{{root.teacherName}} </ion-label>
+    </ion-item>
+    <ion-button fill="outline" (click)="go(root)">进入班课</ion-button>
+  </ion-card>
+
+  <ion-card *ngFor="let root of courseName1 " >
+    <ion-card-header>
+      <ion-card-title >{{root.courseName}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-icon ></ion-icon>
+      <ion-label>{{root.teacherName}} </ion-label>
+    </ion-item>
+    <ion-button fill="outline" (click)="go1(root)">进入班课</ion-button>
+  </ion-card>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule"  routerLink="/class">
+        <ion-icon name="archive"></ion-icon>
+        <ion-label>班课</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="speakers" routerLink="/aboutUs">
+        <ion-icon name="contacts"></ion-icon>
+        <ion-label>我的</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>

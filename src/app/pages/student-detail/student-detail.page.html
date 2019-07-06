@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item routerLink="/start-sign" text-left>返回</ion-item>
+    <ion-title>已签到学生信息</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      <ion-avatar slot="start">
+        <img src="../../../assets/img/registered_one_one.png">
+      </ion-avatar>
+      <ion-label>
+        <h2> {{item.name}}</h2>
+        <!--<h3>Your thoughts betray you</h3>-->
+        <!--<p>I feel the good in you, the conflict...</p>-->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

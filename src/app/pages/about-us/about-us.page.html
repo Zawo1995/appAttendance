@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+      <!--<ion-item routerLink="/home" text-left>返回</ion-item> -->
+      <ion-title>我的</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--<a href="#" ui-sref="app.toMenu" ui-sref-opts="{reload:true}">-->
+<ion-content color="light">
+    <ion-list inset="true">
+        <ion-item >
+            <ion-label>姓名</ion-label>
+            <ion-note item-end>陆玉乾</ion-note>
+        </ion-item>
+        <ion-item >
+            <ion-label>学工号</ion-label>
+            <ion-note slot="end">180327112</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>手机号码</ion-label>
+            <ion-note slot="end">18149542060</ion-note>
+        </ion-item>
+
+            <ion-item >
+                <ion-label>电子邮箱</ion-label>
+                <ion-note slot="end">1628411486@qq.com</ion-note>
+            </ion-item>
+            <ion-item >
+                <ion-label>所属院校</ion-label>
+                <ion-note slot="end">福州大学</ion-note>
+            </ion-item>
+
+    </ion-list>
+
+</ion-content>
+<ion-tabs>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="schedule"  routerLink="/class">
+            <ion-icon name="archive"></ion-icon>
+            <ion-label>班课</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="speakers" routerLink="/aboutUs">
+            <ion-icon name="contacts"></ion-icon>
+            <ion-label>我的</ion-label>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+</ion-tabs>

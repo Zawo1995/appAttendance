@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-item routerLink="/home" color="primary" text-left>返回</ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="light">
+    <ion-list inset="true">
+        <ion-item routerLink="/edit-shop" [queryParams]="{title:'店铺名称',property:'shopName'}">
+            <ion-label>店铺名称</ion-label>
+            <ion-note item-end>{{shop.shopName}}</ion-note>
+        </ion-item>
+        <ion-item routerLink="/edit-shop" [queryParams]="{title:'店铺简称',property:'shopNickName'}">
+            <ion-label>店铺简称</ion-label>
+            <ion-note slot="end">{{shop.shopNickName}}</ion-note>
+        </ion-item>
+        <ion-item >
+            <ion-label>注册时间</ion-label>
+            <ion-note slot="end">{{shop.CreateTime|date:'yyyy:MM:dd HH:mm:ss'}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>手机号码</ion-label>
+            <ion-note slot="end">{{shop.phone}}</ion-note>
+        </ion-item>
+    </ion-list>
+
+    <ion-list inset="true">
+        <ion-item detail >
+            <ion-label>电子邮件</ion-label>
+            <ion-note slot="end">{{shop.email}}</ion-note>
+        </ion-item>
+        <ion-item routerLink="/edit-shop" [queryParams]="{title:'店主姓名',property:'UserName'}">
+            <ion-label>店主姓名</ion-label>
+            <ion-note slot="end">{{shop.UserName}}</ion-note>
+        </ion-item>
+        <ion-item routerLink="/edit-shop" [queryParams]="{title:'店主电话',property:'UserPhone'}">
+            <ion-label>店主电话</ion-label>
+            <ion-note slot="end">{{shop.UserName}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>行业类型</ion-label>
+            <ion-note slot="end">未定</ion-note>
+        </ion-item>
+    </ion-list>
+    <!-- 其他省略 -->
+</ion-content>

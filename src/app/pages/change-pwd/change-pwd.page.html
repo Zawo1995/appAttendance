@@ -1,0 +1,42 @@
+<ion-header >
+  <ion-toolbar color="primary">
+      <ion-item routerLink="/home"color="primary" text-left>返回</ion-item>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding  color="light">
+<!--    <div text-center>
+        <img class="logo" src="assets/img/logoin_title.jpg" alt="">
+    </div>-->
+
+    <ion-grid margin-top>
+        <div style="width: 100%">
+            <form (ngSubmit)="ChangePwd($event)" #MesForm="ngForm" novalidate>
+                <ion-list>
+                    <!--                    <ion-text color="danger" text-left *ngIf="LoginOk == false">
+                                        <p *ngIf="LoginOk == false">用户账号或者密码错误</p>
+                                        </ion-text>-->
+                    <ion-item>
+                        <ion-input type="password" name="OldPwd"    [(ngModel)]="loginUser.OldPwd" placeholder="请输入原始登录密码" required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-input type="password" name="NewPwd"  [(ngModel)]="loginUser.NewPwd" placeholder="请输入登录密码" required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-input type="password" name="SecNewPwd"  [(ngModel)]="loginUser.SecNewPwd" placeholder="请输入确认密码" required></ion-input>
+                    </ion-item>
+<!--                    <ion-item>
+                        <ion-button  name="test" (click)="onLogin()"  >测试</ion-button>
+                    </ion-item>-->
+                </ion-list>
+                <div padding-horizontal>
+                    <ion-button type="submit" expand="full" color="primary"   [disabled]="submitOk == false">保存</ion-button>
+                </div>
+            </form>
+        </div>
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-item routerLink="/shop" color="primary" text-left>返回</ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-grid margin-top>
+        <div style="width: 100%">
+            <form #MesForm="ngForm" novalidate>
+                <ion-list>
+                    <ion-item>
+                        <ion-input type="text" name="value"  [(ngModel)]="value"  placeholder="请输入{{title}}"  required></ion-input>
+                    </ion-item>
+                </ion-list>
+                <div padding-horizontal>
+                    <ion-button type="button" expand="full" color="primary" (click)="editShopMes(MesForm)"  >保存</ion-button>
+                </div>
+            </form>
+        </div>
+    </ion-grid>
+
+</ion-content>
+

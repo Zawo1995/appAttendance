@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>创建班课</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form  #courdeForm="ngForm" (ngSubmit)="addCourse(courdeForm)" novalidate>
+
+
+    <ion-list>
+    <ion-item>
+      <ion-label >课程名</ion-label>
+      <ion-input  name="courseName" [(ngModel)]="courseName" placeholder=""  required>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+
+    <ion-list>
+      <ion-item>
+        <ion-label >开课时间</ion-label>
+        <ion-input  name="startTime" [(ngModel)]="startTime"  placeholder=""  required>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label >上课起始周</ion-label>
+        <ion-input  name="startWeek" [(ngModel)]="startWeek" placeholder=""  required>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label >上课终止周</ion-label>
+        <ion-input  name="endWeek" [(ngModel)]="endWeek" placeholder=""  required>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label >上课地点</ion-label>
+        <ion-input  name="location" [(ngModel)]="location" placeholder=""  required>
+          <ion-button  (click)="map()">选择</ion-button>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+    <ion-item>
+      <ion-label >班级排数</ion-label>
+      <ion-input  name="row" [(ngModel)]="row " placeholder=""  required>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-list>
+    <ion-item>
+      <ion-label >班级排列数</ion-label>
+      <ion-input  name="column" [(ngModel)]="column" placeholder=""  required>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label >上课时间</ion-label>
+        <ion-input  name="dayNum" [(ngModel)]="dayNum" placeholder="星期几上课"  required>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label >上课起始节</ion-label>
+        <ion-input  name="startClass" [(ngModel)]="startClass" placeholder=""  required>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-list>
+      <ion-item>
+        <ion-label >上课结束节</ion-label>
+        <ion-input  name="endClass" [(ngModel)]="endClass" placeholder=""  required>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button shape="round" type="submit" expand="full">创建</ion-button>
+  </form>
+</ion-content>

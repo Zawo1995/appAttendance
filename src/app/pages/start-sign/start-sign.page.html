@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{data.courseName}}签到</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+
+    <ion-button *ngIf="isSign==0"  expand="full"  shape="round" (click)="startSign()">
+      开始签到
+    </ion-button>
+
+    <ion-button  *ngIf="isSign==1" expand="full" shape="round" (click)="endSign()">
+      结束签到
+    </ion-button>
+  <!-- List Full Lines -->
+
+  <ion-card *ngFor="let root of sign " >
+    <ion-card-header>
+      <ion-card-title >{{root.startTime| date:'yy年MM月dd日hh时'}}</ion-card-title>
+    </ion-card-header>
+    <ion-button fill="outline" (click)="go(root)">查看详情</ion-button>
+  </ion-card>
+
+
+</ion-content>

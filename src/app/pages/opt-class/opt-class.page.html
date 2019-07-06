@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>optClass</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input placeholder="请输入班课名称">  </ion-input>
+  <ion-button> </ion-button>
+  <ion-card *ngFor="let root of courseName " >
+    <ion-card-header>
+      <ion-card-title >{{root.courseName}}</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-icon ></ion-icon>
+      <ion-label>{{root.teacherName}} </ion-label>
+    </ion-item>
+    <ion-button fill="outline" (click)="addClass(root)">选择班课</ion-button>
+  </ion-card>
+</ion-content>
